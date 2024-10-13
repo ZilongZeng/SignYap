@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
   container: {
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 2,
+    shadowOpacity: 1.5,
     shadowRadius: 3.84,
     elevation: 5,
     paddingLeft: 10,

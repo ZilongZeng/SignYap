@@ -29,7 +29,7 @@ const RootLayout = () => {
       <Stack.Screen 
         name="learn/SelectSignsScreen"
         options={{
-          title: "Select Signs",
+          title: "",
           headerBackTitleVisible: false,
           headerTintColor: '#3d2f20',
           headerTransparent: true,

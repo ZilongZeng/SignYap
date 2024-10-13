@@ -16,7 +16,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "$(PRODUCT_NAME) needs access to your Camera."
-      }
+      },
+      "bundleIdentifier": "com.anonymous.SignYap"
     },
     "android": {
       "adaptiveIcon": {
@@ -45,9 +46,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ]
+    }
   }
 }
