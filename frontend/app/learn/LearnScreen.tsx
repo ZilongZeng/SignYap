@@ -11,17 +11,13 @@ const LearnScreen = () => {
 
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button}>
-          <View style={styles.emojiShadow}>
-            <Emoji emoji="💫" size={35} />
-          </View>
+          <Emoji emoji="💫" size={35} />
           <Text style={styles.buttonText}>Endless</Text>
         </TouchableOpacity>
 
         <Link href="/learn/SelectSignsScreen" asChild>
           <TouchableOpacity style={styles.button}>
-            <View style={styles.emojiShadow}>
-              <Emoji emoji="🫵" size={35} />
-            </View>
+            <Emoji emoji="🫵" size={35} />
             <Text style={styles.buttonText}>Selectable</Text>
           </TouchableOpacity>
         </Link>
@@ -63,13 +59,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     padding: 15,
     color: '#000',
-  },
-  emojiShadow: {
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 2,
-    shadowRadius: 3.84,
-    elevation: 5,
   },
 });
 

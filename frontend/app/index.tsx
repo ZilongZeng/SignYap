@@ -10,7 +10,7 @@ import Emoji from '@/components/Emoji';
 
 const App = () => {
   const [fontsLoaded] = useFonts({
-    Montserrat: require('../assets/fonts/Montserrat-VariableFont_wght.ttf'),
+    Montserrat: require('../assets/fonts/Montserrat-Bold.ttf'),
   });
 
   if (!fontsLoaded) {
@@ -22,7 +22,7 @@ const App = () => {
                     style={styles.container}>
       <Text style={styles.title}>Ready to SignYap?</Text>
       <View style={styles.buttonContainer}> 
-        <Link href="/learn/LearnScreen" asChild>
+        <Link href="./learn/LearnScreen" asChild>
           <TouchableOpacity style={styles.button}>
             <Emoji emoji="🧠" size={65} />
             <Text style={styles.buttonText}>
@@ -30,7 +30,7 @@ const App = () => {
             </Text>
           </TouchableOpacity>
         </Link>
-        <Link href="/practice/PracticeScreen" asChild>
+        <Link href="./practice/PracticeScreen" asChild>
           <TouchableOpacity style={styles.button}>
             <Emoji emoji="🎯" size={70} />
             <Text style={styles.buttonText}>
@@ -51,9 +51,8 @@ const styles = StyleSheet.create({
     padding: 40,
   },
   title: {
-    fontFamily: 'MontserratMedium',
     fontSize: 38,
-    fontWeight: '500',
+    fontWeight: 'bold',
     color: '#000',
     marginBottom: 40,
   },
@@ -74,9 +73,8 @@ const styles = StyleSheet.create({
     shadowRadius: 7,
   },
   buttonText: {
-    fontFamily: 'MontserratMedium',
     fontSize: 28,
-    fontWeight: '500',
+    fontWeight: '600',
     padding: 15,
     color: '#000',
   },
