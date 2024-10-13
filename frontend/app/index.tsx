@@ -6,8 +6,6 @@ import { useFonts } from 'expo-font';
 import { LinearGradient } from 'expo-linear-gradient';
 import Emoji from '@/components/Emoji';
 
-
-
 const App = () => {
   const [fontsLoaded] = useFonts({
     Montserrat: require('../assets/fonts/Montserrat-Bold.ttf'),
@@ -68,8 +66,8 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     shadowColor: '#000',
-    shadowOffset: { width: 1, height: 6 }, // Position of the shadow
-    shadowOpacity: 0.5, // Opacity of the shadow
+    shadowOffset: { width: 1, height: 6 }, 
+    shadowOpacity: 0.5,
     shadowRadius: 7,
   },
   buttonText: {

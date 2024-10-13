@@ -1,28 +1,35 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { Link } from "expo-router";
 import { LinearGradient } from 'expo-linear-gradient';
 import Emoji from '@/components/Emoji';
 
 const PracticeScreen = () => {
   return (
-    <LinearGradient colors={['#FFFFFF', '#F5E9FE']} style={styles.container}>
+    <LinearGradient colors={["#FFFFFF", "#F5E9FE"]} style={styles.container}>
       <Text style={styles.title}>Select a practice mode</Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Emoji emoji="🌱" size={35} />
-          <Text style={styles.buttonText}>Basic</Text>
-        </TouchableOpacity>
+        <Link href="../error/WIP" asChild>
+          <TouchableOpacity style={styles.button}>
+            <Emoji emoji="🌱" size={35} />
+            <Text style={styles.buttonText}>Basic</Text>
+          </TouchableOpacity>
+        </Link>
 
-        <TouchableOpacity style={styles.button}>
-          <Emoji emoji="🌿" size={35} />
-          <Text style={styles.buttonText}>Intermediate</Text>
-        </TouchableOpacity>
+        <Link href="../error/WIP" asChild>
+          <TouchableOpacity style={styles.button}>
+            <Emoji emoji="🌿" size={35} />
+            <Text style={styles.buttonText}>Intermediate</Text>
+          </TouchableOpacity>
+        </Link>
 
-        <TouchableOpacity style={styles.button}>
-          <Emoji emoji="🌳" size={35} />
-          <Text style={styles.buttonText}>Advanced</Text>
-        </TouchableOpacity>
+        <Link href="../error/WIP" asChild>
+          <TouchableOpacity style={styles.button}>
+            <Emoji emoji="🌳" size={35} />
+            <Text style={styles.buttonText}>Advanced</Text>
+          </TouchableOpacity>
+        </Link>
       </View>
     </LinearGradient>
   );

@@ -1,27 +1,28 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Link } from 'expo-router'; // Import Link for navigation
+import { Link } from 'expo-router';
 import Emoji from '@/components/Emoji';
 
-const LearnScreen = () => {
-  return (
-    <LinearGradient colors={['#FFFFFF', '#F5E9FE']} style={styles.container}>
-      <Text style={styles.title}>Select a Learning Mode</Text>
+const LearnScreen = () => {  return (
+    <LinearGradient colors={["#FFFFFF", "#F5E9FE"]} style={styles.container}>
+      <Text style={styles.title}>Select a learning mode</Text>
 
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.button}>
-          <Emoji emoji="💫" size={35} />
-          <Text style={styles.buttonText}>Endless</Text>
-        </TouchableOpacity>
-
         <Link href="/learn/SelectSignsScreen" asChild>
           <TouchableOpacity style={styles.button}>
-            <Emoji emoji="🫵" size={35} />
-            <Text style={styles.buttonText}>Selectable</Text>
+            <Emoji emoji="🖱️" size={35} />
+            <Text style={styles.buttonText}>Choose Letters to Study</Text>
           </TouchableOpacity>
         </Link>
-      </View> 
+
+        <Link href="../camera/CameraView" asChild>
+          <TouchableOpacity style={styles.button}>
+            <Emoji emoji="💫" size={35} />
+            <Text style={styles.buttonText}>Endless</Text>
+          </TouchableOpacity>
+        </Link>
+      </View>
     </LinearGradient>
   );
 };

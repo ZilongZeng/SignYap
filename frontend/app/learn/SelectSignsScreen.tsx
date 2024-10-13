@@ -3,32 +3,32 @@ import { View, Text, StyleSheet, FlatList, Image } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 
 const aslImages = [
-  require('../../assets/aslLetters/a.png'),
-  require('../../assets/aslLetters/b.png'),
-  // require('../../assets/aslLetters/c2.png'),
-  // require('../../assets/aslLetters/d.png'),
-  // require('../../assets/aslLetters/e.png'),
-  // require('../../assets/aslLetters/f.png'),
-  // require('../../assets/aslLetters/g.png'),
-  // require('../../assets/aslLetters/h.png'),
-  // require('../../assets/aslLetters/i.png'),
-  // require('../../assets/aslLetters/j.png'),
-  // require('../../assets/aslLetters/k.png'),
-  // require('../../assets/aslLetters/l.png'),
-  // require('../../assets/aslLetters/m.png'),
-  // require('../../assets/aslLetters/n.png'),
-  // require('../../assets/aslLetters/o.png'),
-  // require('../../assets/aslLetters/p.png'),
-  // require('../../assets/aslLetters/q.png'),
-  // require('../../assets/aslLetters/r.png'),
-  // require('../../assets/aslLetters/s.png'),
-  // require('../../assets/aslLetters/t.png'),
-  // require('../../assets/aslLetters/u.png'),
-  // require('../../assets/aslLetters/v.png'),
-  // require('../../assets/aslLetters/w.png'),
-  // require('../../assets/aslLetters/x.png'),
-  // require('../../assets/aslLetters/y.png'),
-  // require('../../assets/aslLetters/z.png')
+  require("../../assets/aslLetters/A.png"),
+  require("../../assets/aslLetters/B.png"),
+  require("../../assets/aslLetters/C.png"),
+  require("../../assets/aslLetters/D.png"),
+  require("../../assets/aslLetters/E.png"),
+  require("../../assets/aslLetters/F.png"),
+  require("../../assets/aslLetters/G.png"),
+  require("../../assets/aslLetters/H.png"),
+  require("../../assets/aslLetters/I.png"),
+  require("../../assets/aslLetters/J.png"),
+  require("../../assets/aslLetters/K.png"),
+  require("../../assets/aslLetters/L.png"),
+  require("../../assets/aslLetters/M.png"),
+  require("../../assets/aslLetters/N.png"),
+  require("../../assets/aslLetters/O.png"),
+  require("../../assets/aslLetters/P.png"),
+  require("../../assets/aslLetters/Q.png"),
+  require("../../assets/aslLetters/R.png"),
+  require("../../assets/aslLetters/S.png"),
+  require("../../assets/aslLetters/T.png"),
+  require("../../assets/aslLetters/U.png"),
+  require("../../assets/aslLetters/V.png"),
+  require("../../assets/aslLetters/W.png"),
+  require("../../assets/aslLetters/X.png"),
+  require("../../assets/aslLetters/Y.png"),
+  require("../../assets/aslLetters/Z.png"),
 ];
 
 const SelectSignsScreen = () => {
@@ -36,16 +36,15 @@ const SelectSignsScreen = () => {
     <LinearGradient colors={['#FFFFFF', '#F5E9FE']}
                     style={styles.container}>
       <View style={styles.container}>
-        <Text style={styles.title}>Select ASL Signs</Text>
+        <Text style={styles.title}>Select Letter Signs</Text>
         <FlatList
           data={aslImages}
           renderItem={({ item }) => (
             <Image source={item} style={styles.image} />
           )}
-          keyExtractor={(item, index) => index.toString()} // Use index as key for simplicity
-          numColumns={3} // Number of columns in the grid
+          keyExtractor={(item, index) => index.toString()} 
+          numColumns={3} 
           contentContainerStyle={styles.imageContainer}
-          style={styles.flatList}
         />
       </View>
     </LinearGradient>
@@ -60,23 +59,20 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 20,
+    paddingTop: 50,
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
-    marginBottom: 20, // Space between title and images
-  },
-  flatList: {
-    marginTop: 40,
+    marginBottom: 30,
   },
   imageContainer: {
-    alignItems: 'center', // Center the images
+    alignItems: 'center',
   },
   image: {
-    width: 100, // Set width of images
-    height: 100, // Set height of images
-    margin: 5, // Space between images
+    width: 100, 
+    height: 100, 
+    margin: 5, 
   },
 });
 
