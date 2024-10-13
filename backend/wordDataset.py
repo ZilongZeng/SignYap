@@ -1,5 +1,3 @@
-# wordDataset.py
-
 class WordDataset:
     def __init__(self):
         # Hardcoded list of three-letter words
