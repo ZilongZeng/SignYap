@@ -1,37 +1,42 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
+import { Stack } from "expo-router";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
-
-  useEffect(() => {
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  if (!loaded) {
-    return null;
-  }
-
+const RootLayout = () => {
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-    </ThemeProvider>
+    <Stack>
+      <Stack.Screen 
+        name="index" 
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen 
+        name="learn/LearnScreen"
+        options={{
+          title: "",
+          headerBackTitleVisible: false,
+          headerTintColor: '#3d2f20',
+          headerTransparent: true,
+        }}
+      />
+      <Stack.Screen 
+        name="practice/PracticeScreen" 
+        options={{
+          title: "",
+          headerBackTitleVisible: false,
+          headerTintColor: '#3d2f20',
+          headerTransparent: true,
+        }}
+      />
+      {/* Add the new SelectSignsScreen here */}
+      <Stack.Screen 
+        name="learn/SelectSignsScreen"
+        options={{
+          title: "Select Signs",
+          headerBackTitleVisible: false,
+          headerTintColor: '#3d2f20',
+          headerTransparent: true,
+        }}
+      />
+    </Stack>
   );
 }
+
+export default RootLayout;
